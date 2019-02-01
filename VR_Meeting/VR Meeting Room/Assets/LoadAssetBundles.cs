@@ -18,7 +18,7 @@ public class LoadAssetBundles : MonoBehaviour
 
     IEnumerator RetrieveAssetBundle()
     {
-        using (UnityWebRequest repo = UnityWebRequestAssetBundle.GetAssetBundle("https://www.dropbox.com/sh/loq5l8fvpjsqxjx/AADn2KWQUUvlGk4AobrlL-hsa?dl=0"))
+        using (UnityWebRequest repo = UnityWebRequestAssetBundle.GetAssetBundle("https://github.com/wwm0nkey/VR_Meeting/tree/master/AssetBundles"))
         {
             yield return repo.SendWebRequest();
 
