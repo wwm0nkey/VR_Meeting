@@ -34,13 +34,16 @@ public class LoadAssetBundles : MonoBehaviour
                 {
                     bundle = DownloadHandlerAssetBundle.GetContent(repo);
                     var prefab = bundle.LoadAsset(objectName);
-                    Instantiate(prefab, spawnLocation);
+                    GameObject item = Instantiate(prefab, spawnLocation) as GameObject;
+                    item.AddComponent<Rigidbody>();
                     isLoaded = true;
                 }
                 else
                 {
                     var prefab = bundle.LoadAsset(objectName);
-                    Instantiate(prefab, spawnLocation);
+                    GameObject item = Instantiate(prefab, spawnLocation) as GameObject;
+                    item.AddComponent<Rigidbody>();
+
                 }
             }
         }
@@ -56,7 +59,7 @@ public class LoadAssetBundles : MonoBehaviour
 
     public void InstantiateObjectFromBundle(string assetName)
     {
-        Destroy(GameObject.FindGameObjectWithTag("Shape"));
+        //Destroy(GameObject.FindGameObjectWithTag("Shape"));
         Debug.Log(assetName);
         StartCoroutine(RetrieveAssetBundle(assetName));
         // var prefab = myLoadedAssetbundle.LoadAsset(assetName);
