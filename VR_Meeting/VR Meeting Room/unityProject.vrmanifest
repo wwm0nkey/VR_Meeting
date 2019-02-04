@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrmeetingroom.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "E:\\Documents - DD\\GitHub\\VR_Meeting\\VR_Meeting\\VR Meeting Room\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VR Meeting Room [Testing]"
+        }
+      }
+    }
+  ]
+}
