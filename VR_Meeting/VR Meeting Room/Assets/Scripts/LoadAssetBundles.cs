@@ -6,7 +6,6 @@ using UnityEngine;
 public class LoadAssetBundles : MonoBehaviour
 {
     AssetBundle myLoadedAssetbundle;
-    public string path;
     public GameObject clones;
     public Transform spawnLocation;
     private bool isLoaded = false;
@@ -20,7 +19,7 @@ public class LoadAssetBundles : MonoBehaviour
 
     IEnumerator RetrieveAssetBundle(string objectName)
     {
-        using (UnityWebRequest repo = UnityWebRequestAssetBundle.GetAssetBundle("https://www.dropbox.com/s/ixld0l0oblu6060/shapes.unity3d?dl=1"))
+        using (UnityWebRequest repo = UnityWebRequestAssetBundle.GetAssetBundle("https://www.dropbox.com/s/jabsvtji1brqily/shapes.unity3d?dl=1"))
         {
             yield return repo.SendWebRequest();
 
